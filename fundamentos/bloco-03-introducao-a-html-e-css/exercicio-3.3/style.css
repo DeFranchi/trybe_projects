@@ -32,11 +32,11 @@
   }
   
   .bowser {
-    width: 00px;
+    width: 200px;
     position: absolute;
     z-index: 3;
     left: 450px;
-    top: 200px;
+    top: 250px;
   }
  
   
