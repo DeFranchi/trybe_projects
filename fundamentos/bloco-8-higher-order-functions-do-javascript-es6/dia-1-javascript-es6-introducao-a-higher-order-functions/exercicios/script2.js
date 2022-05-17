@@ -11,3 +11,4 @@ const resultadoFinal = (numeroSorteado, callBack) => {
     }
 }
 console.log(resultadoFinal(5, gerarNumero));
+console.log(gerarNumero());
