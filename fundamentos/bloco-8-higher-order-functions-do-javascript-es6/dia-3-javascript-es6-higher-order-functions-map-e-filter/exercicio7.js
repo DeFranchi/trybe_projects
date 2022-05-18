@@ -1,5 +1,3 @@
-
-
 const books = [
     {
       id: 1,
@@ -63,10 +61,14 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
 
-  
- const formatedBookNames = books
- .map((element) => `${element.name} - ${element.genre} - ${element.author.name}` );
- console.log(formatedBookNames)
+
+function authorWith3DotsOnName (books){ 
+  return books.find((element) => element.author.name.split(' ')
+  .filter((element) => element.endsWith('.')).length === 3).name;
+
+}
+
+
+console.log(authorWith3DotsOnName(books))
 

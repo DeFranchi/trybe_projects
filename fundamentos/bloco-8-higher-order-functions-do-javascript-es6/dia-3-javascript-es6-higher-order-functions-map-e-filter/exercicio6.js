@@ -1,5 +1,3 @@
-
-
 const books = [
     {
       id: 1,
@@ -64,9 +62,9 @@ const books = [
   ];
   
   // Adicione o código do exercício aqui:
+  const oldBooks = books
+  .filter((element) => 2022 - element.releaseYear > 60)
+  .map((element) => element.name);
 
+  console.log(oldBooks);
   
- const formatedBookNames = books
- .map((element) => `${element.name} - ${element.genre} - ${element.author.name}` );
- console.log(formatedBookNames)
-

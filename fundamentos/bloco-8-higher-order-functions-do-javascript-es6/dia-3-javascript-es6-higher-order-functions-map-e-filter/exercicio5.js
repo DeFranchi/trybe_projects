@@ -1,5 +1,3 @@
-
-
 const books = [
     {
       id: 1,
@@ -62,11 +60,10 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
+  const fantasyOrScienceFictionAuthors = books
+  .filter((element) => element.genre == 'Terror' || 'Fantasia')
+  .map((element) => element.author.name)
+  .sort();
 
+  console.log(fantasyOrScienceFictionAuthors)
   
- const formatedBookNames = books
- .map((element) => `${element.name} - ${element.genre} - ${element.author.name}` );
- console.log(formatedBookNames)
-
