@@ -64,8 +64,11 @@ const books = [
 
 
 function authorWith3DotsOnName (books){ 
-  return books.find((element) => element.author.name.split(' ')
-  .filter((element) => element.endsWith('.')).length === 3).name;
+  return books.find((element) => 
+    element.author.name
+      .split(' ')
+      .filter((element) => element.endsWith('.')).length === 3)
+      .name;
 
 }
 

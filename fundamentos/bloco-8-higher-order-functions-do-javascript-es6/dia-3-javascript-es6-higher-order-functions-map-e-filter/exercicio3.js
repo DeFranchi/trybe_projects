@@ -61,6 +61,7 @@ const books = [
     },
   ];
 
-  const fantasyOrScienceFiction = books.filter((element) => element.genre == 'Fantasia' || element.genre == 'Terror');
+  const fantasyOrScienceFiction = books
+  .filter((element) => element.genre == 'Fantasia' || element.genre == 'Terror');
   console.log(fantasyOrScienceFiction);
    
