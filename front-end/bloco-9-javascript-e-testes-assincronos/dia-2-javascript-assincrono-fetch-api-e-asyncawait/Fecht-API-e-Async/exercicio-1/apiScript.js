@@ -1,7 +1,8 @@
 // apiScript.js
+const fetch = require('node-fetch');
 const API_URL = 'https://icanhazdadjoke.com/';
 
-
+API_URL.data.map((e) => console.log(e));
 function jokeHml(joke){
     const jokeContainer = document.getElementById('jokeContainer')
     jokeContainer.innerHTML = joke;

@@ -31,6 +31,7 @@
 //Usando o await , a fetchJoke espera o fetch terminar toda sua execução (até o último .then() ou .catch()) para só depois executar o console.log().
 
 const fetch = require('node-fetch');
+
 const fetchJoke = async () => {
   const url = 'https://api.chucknorris.io/jokes/random?category=dev';
 

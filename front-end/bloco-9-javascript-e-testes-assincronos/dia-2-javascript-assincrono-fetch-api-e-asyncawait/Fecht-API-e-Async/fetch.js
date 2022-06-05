@@ -13,14 +13,20 @@
 // // o then(), espera a reposta do fecth(), ou o then() anterior ser concluida para comecar sua execucao.
 
 const fetch = require('node-fetch');
+console.log(fetch)
+const fetchJoke = async () => {
+  const url = 'https://api.chucknorris.io/jokes/random?category=dev';
 
-const fetchJoke = () => {
-  const url = 'api.chucknorris.io/jokes/random?category=dev';
-
-  fetch(url) // promise 
+  try{ // executa o codigo no escopo do try, e se der erro, o erro é tratado
+          // no escopo do cath(error);
+  const result = await fetch(url) // promise 
+  // usando o await a fetchJoke espera o Fecht temrinal toda sua execucao,
+  // ate o ultimo .then() ou .catch(), so para depois executar o console.log.
     .then((response) => response.json()) //converteu para json
     .then((data) => console.log(data.value)) //pegar os values do obj
-    .catch((error) => console.log(`Algo deu errado :( \n${error}`));
+  } catch(error) {
+    console.log(`Algo deu errado :( \n${error}`)
+  }
 }
 
 fetchJoke();
